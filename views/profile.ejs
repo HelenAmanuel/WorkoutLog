@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>iSweat</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-profile">
+  <% if (user.local.email) { %>
+    <h1>Welcome back <%= user.local.email %>!</h1>
+    <span>My mantras for today:</span>
+    <div class="mantraContainer">
+      <p class="mantra"><%= user.one %></p>
+      <p class="mantra"><%= user.two %></p>
+      <p class="mantra"><%= user.three %></p>
+    </div>
+  <% } %>
+
+  <h3>Workout Today?</h3>
+  <h2>Enter information here:</h2>
+
+  <form action="/workout" method="POST">
+    <input type="text" placeholder="Sets" name="sets">
+    <input type="text" placeholder="Rep" name="reps">
+    <input type="text" placeholder="Enter Workout Here..." name="workout">
+    <input type="text" placeholder="Notes/Comments" name="comment">
+    <button type="submit">Submit</button>
+  </form>
+
+  <h4>-Workout Log-</h4>
+  <tbody>
+    <table>
+      <tr>
+        <th class="topRow">Reps</th>
+        <th class="topRow">Sets</th>
+        <th class="topRow">Workout</th>
+        <th class="topRow">Notes | Comments</th>
+      </tr>
+    <% for(var i=0; i<workout.length; i++) {%>
+      <tr>
+        <th class="topRow2"><%=workout[i].reps%></th>
+        <th class="topRow2"><%=workout[i].sets%></th>
+        <th class="topRow2"><%=workout[i].workout%></th>
+        <th class="topRow2"><%=workout[i].comment%></th>
+        <th><i class="fa fa-trash" aria-hidden="true"></i></th>
+      </tr>
+    <% } %>
+    </table>
+  </tbody>
+
+  <form>
+    <input id="one" type="text" placeholder="Mantra 1" name="one">
+    <input id="two" type="text" placeholder="Mantra 2" name="two">
+    <input id="three" type="text" placeholder="Mantra 3" name="three">
+
+  </form>
+  <button id="maniBtn">Manifest</button>
+  <script src="main.js"></script>
+
+</body>
+</html>

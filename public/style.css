@@ -1,0 +1,66 @@
+body{
+    font-family:garamond;
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: url(https://images.unsplash.com/photo-1566568531155-07244e00963d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+img{
+  height: 200px;
+}
+
+h1 {
+  font-family:Copperplate, sans-serif;
+  font-size: 70px;
+  color: white;
+}
+.body-index{
+background-image: url(https://images.unsplash.com/photo-1567793484700-b0c65d6e4535?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.form-control{
+  background: transparent;
+}
+.body-login {
+background-image: url(https://images.unsplash.com/photo-1570716892027-8347dbdac4aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+}
+.body-profile{
+
+}
+.body-signup{
+
+}
+.jumbotron {
+background: transparent;
+}
+.index-style{
+  background: transparent;
+}
+tr{
+  width: 100%;
+  margin: 0 5% 0 5%;
+}
+.topRow{
+  width:20%;
+  text-align: center;
+  border: 1px solid gray;
+  margin: 0 2% 0 2%;
+  background-color: lightgray;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.topRow2{
+  background-color: beige;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.fa-trash, .fa-thumbs-up{
+  color: white;
+}
+input {
+  width:20%;
+}
